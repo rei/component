@@ -11,14 +11,9 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js"
   },
-  "dependencies": {
-    "@rei/cdr-accordion": "^1.0.4",
-    "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-button": "^2.0.0",
-    "@rei/cdr-cta": "^1.1.1",
-    "@rei/cdr-icon": "^2.0.1",
-    "@rei/cdr-text": "^1.0.2",
-    "@rei/cdr-tokens": "^0.1.8",
+  "peerDependencies": {
+    "@rei/cedar": "^1.0.0-alpha.1",
+    "@rei/cdr-tokens": "^1.0.0",
     "vue": "^2.5.11"
   },
   "browserslist": [
@@ -27,6 +22,8 @@
     "not ie <= 8"
   ],
   "devDependencies": {
+    "@rei/cedar": "^1.0.0-alpha.1",
+    "@rei/cdr-tokens": "^1.0.0",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
@@ -66,6 +63,7 @@
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue": "^2.5.11",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.1.2",
     "vue-template-compiler": "^2.5.2",

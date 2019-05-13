@@ -1,15 +1,13 @@
 <script>
-import { CdrText } from '@rei/cdr-text';
-import { CdrButton } from '@rei/cdr-button';
-import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
+import { CdrText, CdrButton, CdrIcon } from '@rei/cedar';
 import SampleChildComponent from './components/SampleChildComponent';
 
 export default {
   name: 'SampleComponent',
   components: {
     CdrButton,
-    IconCheckFill,
-    IconXFill,
+    IconCheckFill: CdrIcon.IconCheckFill,
+    IconXFill: CdrIcon.IconXFill,
     CdrText,
     SampleChildComponent,
   },
@@ -83,10 +81,9 @@ export default {
   </div>
 </template>
 <style lang="scss">
-  @import '~@rei/cdr-tokens/dist/cdr-tokens.scss';
-  .cdr-button {
-    &__icon {
-      fill: $clean-slate;
-    }
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+
+  .sample-component {
+    padding: $cdr-space-inset-one-x;
   }
 </style>
