@@ -1,7 +1,10 @@
 <script>
-import { CdrText } from '@rei/cdr-text';
-import { CdrButton } from '@rei/cdr-button';
-import { IconCheckFill, IconXFill } from '@rei/cdr-icon';
+import {
+  CdrButton,
+  CdrText,
+  IconCheckFill,
+  IconXFill,
+} from '@rei/cedar';
 import SampleChildComponent from './SampleChildComponent.vue';
 
 export default {
@@ -21,7 +24,7 @@ export default {
     },
     description: {
       type: String,
-      default: 'Description not set'
+      default: 'Description not set',
     },
     accordionLabel: {
       type: String,
@@ -53,10 +56,16 @@ export default {
 </script>
 <template>
   <div class="sample-component">
-    <cdr-text tag="h1" modifier="display">
+    <cdr-text
+      tag="h1"
+      modifier="display"
+    >
       {{ title }}
     </cdr-text>
-    <cdr-text tag="p" modifier="body">
+    <cdr-text
+      tag="p"
+      modifier="body"
+    >
       {{ description }}
     </cdr-text>
     <sample-child-component

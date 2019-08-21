@@ -1,6 +1,5 @@
 <script>
-import { CdrAccordion, CdrAccordionItem } from '@rei/cdr-accordion';
-import { CdrText } from '@rei/cdr-text';
+import { CdrAccordion, CdrAccordionItem, CdrText } from '@rei/cedar';
 
 export default {
   name: 'SampleChildComponent',

@@ -33,6 +33,12 @@ module.exports = {
       label: 'Include sample Vue components?',
       default: true,
     },
+    useRollup: {
+      type: 'boolean',
+      required: true,
+      label: 'Use Rollup to build a distributable package?',
+      default: true,
+    },
   },
   helpers: {
     pascalcase: toPascal,
