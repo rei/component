@@ -62,8 +62,8 @@ module.exports = {
       path.resolve(cmpDir, pascalName + '.vue'),
     );
     fs.renameSync(
-      path.resolve(testDir, 'Component.spec.js'),
-      path.resolve(testDir, pascalName + '.spec.js'),
+      path.resolve(testDir, 'Component.vue-spec.js'),
+      path.resolve(testDir, pascalName + '.vue-spec.js'),
     );
     logger.log(chalk.bold('To get started:'));
     if (!data.inPlace) logger.log(chalk.green('cd ' + data.destDirName));
