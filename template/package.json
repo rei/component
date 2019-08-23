@@ -24,15 +24,14 @@
     "dev": "npm-run-all -p dev:build dev:server",
     "build": "cross-env NODE_ENV=production BABEL_ENV=es rollup -c",
     "prebuild": "rimraf dist index.css",
-    "test": "cross-env BABEL_ENV=test nyc --all vunit --spec=./test/**/*.spec.js",
     {{else}}
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --mode=development --inline --progress --config build/webpack.dev.conf.js",
     "build": "npm run lint && node build/build.js",
-    "test": "npm run test-coverage",
     {{/if_eq}}
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "prepare": "npm run build && npm run lint",
+    "test": "npm run test-coverage",
     "test-coverage": "npm run test-js-coverage && npm run test-vue-coverage",
     "test-js": "cross-env BABEL_ENV=test mocha --require @babel/register --recursive test/**/*.spec.js",
     "test-js-coverage": "cross-env NODE_ENV=test nyc mocha --require @babel/register --recursive test/**/*.spec.js",
@@ -42,10 +41,8 @@
     "test-vue-watch": "vunit --spec='./test/**/*.vue-spec.js' --watch=src"
   },
   "dependencies": {
-    {{#if_eq addComponents true}}
     "@rei/cdr-tokens": "^0.1.8",
     "@rei/cedar": "^2.0.2",
-    {{/if_eq}}
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -101,13 +98,15 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^4.35.3",
     "webpack-bundle-analyzer": "^2.9.0",
+    "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.2.1",
     "webpack-merge": "^4.1.0"
     {{/if_eq}}
   },
   "nyc": {
     "include": [
-      "src/**/*.(js|vue)"
+      "src/**/*.js",
+      "src/**/*.vue"
     ],
     "instrument": false,
     "sourceMap": false

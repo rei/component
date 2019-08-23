@@ -3,15 +3,15 @@
 
 ## To Get Started
 * Run `npm run dev` to run the component locally. (See local development below)
-{{#if_eq addComponents true}}
-### If you want to reuse the sample components:
-* Rename the SampleComponent.vue file to your preferred component name.
-  * Update the name property in the `SampleComponent.vue` to reflect your new component name.
-  * update the import path in `src/components/index.js`
-{{/if_eq}}
+
+### Rename Component:
+Some component properties couldn't be named during template creation.
+* Rename the `name` field in {{pascalcase name}}.vue file to your preferred component name from 'MainComponent'.
+  * Make sure to update the index.html from `<main-component>` to match your new component name.
 
 ## Local Development
 ``` bash
+{{#if_eq useRollup true}}
 # create a dev bundle and serve with febs from localhost:8080 with watchers
 npm run dev
 
@@ -23,12 +23,16 @@ npm run dev:server
 
 # delete the dist folder and run dev build and server
 npm run dev:clean
-
-# lint files with es-lint
-npm run lint
+# run in dev serve with webpack from auto-assigned port listed in console
 
 # build for production with minification with rollup
 npm run build
+{{else}}
+npm run dev
+{{/if_eq}}
+
+# lint files with es-lint
+npm run lint
 
 # run unit tests from files in /test with filenames *.spec.js
 npm run test

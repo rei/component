@@ -27,12 +27,6 @@ module.exports = {
       type: 'string',
       label: 'Author',
     },
-    addComponents: {
-      type: 'boolean',
-      required: true,
-      label: 'Include sample Vue components?',
-      default: true,
-    },
     useRollup: {
       type: 'boolean',
       required: true,
@@ -42,9 +36,6 @@ module.exports = {
   },
   helpers: {
     pascalcase: toPascal,
-  },
-  filters: {
-    'src/components/Sample*.*': 'addComponents',
   },
   skipInterpolation: 'src/**/*.vue',
   complete: function(data, { logger, chalk }) {

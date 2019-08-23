@@ -4,37 +4,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  {{#if_eq useRollup true}}
   <link rel="stylesheet" href="dist/app.bundle.css">
+  {{/if_eq}}
   <title>{{ name }}</title>
 </head>
 
 <body class="cdr-inset">
   <main-component
-    id="app" title="{{name}}"
+    id="app"
+    title="{{name}}"
     description="{{description}}"
-    {{#if_eq addComponents true}}
-      accordion-label=" Example child component label"
-      :faqs="[
-        {
-          question: 'How do i do this?',
-          answer: 'This is how.',
-          id: '1',
-        },
-        {
-          question: 'When?',
-          answer: 'The time is now.',
-          id: '2',
+    accordion-label=" Example child component label"
+    :faqs="[
+      {
+        question: 'How do i do this?',
+        answer: 'This is how.',
+        id: '1',
+      },
+      {
+        question: 'When?',
+        answer: 'The time is now.',
+        id: '2',
 
-        },
-        {
-          question: 'Where?',
-          answer: 'Anywhere you can make it happen.',
-          id: '3',
-        },
-      ]"
-    {{/if_eq}}>
+      },
+      {
+        question: 'Where?',
+        answer: 'Anywhere you can make it happen.',
+        id: '3',
+      },
+    ]"
+  >
   </main-component>
+  {{#if_eq useRollup true}}
   <script src="dist/app.bundle.js"></script>
+  {{/if_eq}}
 </body>
-
 </html>

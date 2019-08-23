@@ -24,7 +24,7 @@ export default {
     },
     description: {
       type: String,
-      default: 'Description not set',
+      default: 'Description Not Set',
     },
     accordionLabel: {
       type: String,
@@ -59,12 +59,14 @@ export default {
     <cdr-text
       tag="h1"
       modifier="display"
+      data-ui="title"
     >
       {{ title }}
     </cdr-text>
     <cdr-text
       tag="p"
       modifier="body"
+      data-ui="description"
     >
       {{ description }}
     </cdr-text>
@@ -72,9 +74,13 @@ export default {
       v-if="showFaqs"
       :faqs="faqs"
       :accordion-label="accordionLabel"
+      data-ui="faqs"
       class="cdr-stack"
     />
-    <cdr-button :on-click="toggleFaqs">
+    <cdr-button
+      :on-click="toggleFaqs"
+      data-ui="toggle-faq-button"
+    >
       <icon-x-fill
         v-if="showFaqs"
         slot="icon"

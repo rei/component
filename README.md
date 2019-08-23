@@ -17,8 +17,7 @@ $ npm run dev
 |`name`| Component name - write in kebab-case, used throughout project, so choose wisely! |
 |`description`| Component description |
 |`author`| Your name and email address |
-|`addComponents`| Add sample Vue.js components with Cedar dependencies |
-    
+
 
 ### About Example and Development Files
 * An example component is optionally auto-generated with Cedar 2 component examples and example Cedar Token usage.

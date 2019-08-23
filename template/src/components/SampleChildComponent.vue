@@ -32,7 +32,10 @@ export default {
     <cdr-text modifier="body">
       {{ accordionLabel }}
     </cdr-text>
-    <div v-if="faqs">
+    <div
+      v-if="faqs && cleanedFaqs.length"
+      data-ui="faq-section"
+    >
       <cdr-accordion :compact="true">
         <cdr-accordion-item
           v-for="(faq, i) in cleanedFaqs"
