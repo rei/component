@@ -5,35 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <link rel="stylesheet" href="dist/app.bundle.css">
+  {{#if_eq addHeaderFooter true}}
+  <link href="https://future.rei.com/static/global/head/rei-cedar.min.css" rel="stylesheet">
+  <link href="https://future.rei.com/static/legacy-nav/main.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400,700" rel="stylesheet">
+  {{/if_eq}}
   <title>{{ name }}</title>
 </head>
 
-<body class="cdr-inset">
-  <main-component
-    id="app" title="{{name}}"
-    description="{{description}}"
-    {{#if_eq addComponents true}}
-      accordion-label=" Example child component label"
-      :faqs="[
-        {
-          question: 'How do i do this?',
-          answer: 'This is how.',
-          id: '1',
-        },
-        {
-          question: 'When?',
-          answer: 'The time is now.',
-          id: '2',
-
-        },
-        {
-          question: 'Where?',
-          answer: 'Anywhere you can make it happen.',
-          id: '3',
-        },
-      ]"
-    {{/if_eq}}>
-  </main-component>
+<body>
+  <div id="app"></div>
   <script src="dist/app.bundle.js"></script>
 </body>
 

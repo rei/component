@@ -44,6 +44,12 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
+    {{#if_eq addHeaderFooter true}}
+    "@rei/dev-header-footer": "0.0.3",
+    "apicache": "^1.4.0",
+    "isomorphic-fetch": "^2.2.1",
+    "morgan": "^1.9.1",
+    {{/if_eq}}
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/runtime": "^7.4.4",

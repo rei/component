@@ -1,4 +1,7 @@
 import Vue from 'vue';
+{{#if_eq addHeaderFooter true}}
+import HeaderFooter from '@rei/dev-header-footer'
+{{/if_eq}}
 
 /* Bring in external style sheets here that aren't explicitly imported elsewhere.
  * This file is only for local dev and does not generate any distribution CSS bundles
@@ -20,9 +23,41 @@ import './dist/index.css'
 import MainComponent from '.';
 
 Vue.config.productionTip = false;
+const options = {
+  title: '{{name}}',
+  description: '{{description}}',
+  {{#if_eq addComponents true}}
+  accordionLabel: 'Example child component label',
+  faqs: [
+    {
+    question: 'How do i do this?',
+    answer: 'This is how.',
+    id: '1',
+    },
+    {
+    question: 'When?',
+    answer: 'The time is now.',
+    id: '2',
+
+    },
+    {
+    question: 'Where?',
+    answer: 'Anywhere you can make it happen.',
+    id: '3',
+   },
+  ]
+  {{/if_eq}}
+}
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { MainComponent },
+  render(h){
+    {{#if_eq addHeaderFooter true}}
+    return h(HeaderFooter, [h(MainComponent, { class: 'container', props: { ...options } })])
+    {{/if_eq}}
+    {{#if_eq addHeaderFooter false}}
+    return h(MainComponent, { props: { ...options } })
+    {{/if_eq}}
+  }
 });

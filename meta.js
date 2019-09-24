@@ -27,6 +27,12 @@ module.exports = {
       type: 'string',
       label: 'Author',
     },
+    addHeaderFooter: {
+      type: 'boolean',
+      required: true,
+      label: 'Include dev header/footer?',
+      default: true,
+    },
     addComponents: {
       type: 'boolean',
       required: true,
