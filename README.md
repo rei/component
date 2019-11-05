@@ -3,8 +3,7 @@ This is a template for building REI components using `@vue/cli` with the legacy 
 
 ### Usage
 ``` bash
-$ npm install -g @vue/cli
-$ npm install -g @vue/cli-init
+$ npm install -g @vue/cli @vue/cli-init
 $ vue init rei/component your-component-name
 $ cd your-component-name
 $ npm install
