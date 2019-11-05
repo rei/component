@@ -16,7 +16,8 @@ This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and
 
 ### Build system
 
-This component only contains a build system for it's dev and test environments. It expects that the micro-site consuming it will handle building it using [@rei/febs](https://github.com/rei/febs).
+This component only contains a build system for distribution and another for development.
+`rollup` is used for distribution, as `webpack` does not currently export `ES6` modules. `febs` is used for the local dev server as it is anticipated the final application will be bundled using `febs`.
 
 ## Local Development
 ``` bash
@@ -34,6 +35,9 @@ npm run dev:clean
 
 # lint files with es-lint
 npm run lint
+
+# build for production with minification with rollup
+npm run build
 
 # run unit tests from files in /test with filenames *.spec.js
 npm run test
@@ -65,6 +69,7 @@ npm run test
 │   └── // spec files and test utilities
 ├── package-lock.json
 ├── package.json
+├── rollup.config.js
 ├── febs-config.json
 └── webpack.overrides.conf.js
 ```

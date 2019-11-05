@@ -3,7 +3,9 @@
   "description": "{{ description }}",
   "author": "{{ author }}",
   "version": "0.0.1",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "style": "dist/index.css",
   "files": [
     "dist",
     "src"
@@ -11,9 +13,14 @@
   "browserslist": "extends @rei/browserslist-config",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "cross-env NODE_ENV=dev febs dev --watch",
+    "dev:server": "cross-env NODE_ENV=dev febs dev",
+    "dev:build": "cross-env NODE_ENV=dev BABEL_ENV=es rollup -c --watch",
+    "dev:clean": "rimraf dist && npm run dev",
+    "dev": "npm-run-all -p dev:build dev:server",
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
+    "prebuild": "rimraf dist index.css",
+    "build": "cross-env NODE_ENV=production BABEL_ENV=es rollup -c",
     "test": "cross-env BABEL_ENV=test nyc --all vunit --spec=./test/**/*.spec.js",
     "test-coverage": "npm run test-js-coverage && npm run test-vue-coverage",
     "test-js": "cross-env BABEL_ENV=test mocha --require babel-register --recursive src/main/js/test/**/*.spec.js",
@@ -50,7 +57,13 @@
     "eslint-plugin-vue": "^5.2.2",
     "npm-run-all": "^4.1.5",
     "postcss-url": "^8.0.0",
-    "rimraf": "^2.6.0"
+    "rimraf": "^2.6.0",
+    "rollup": "^1.11.0",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.3",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-vue": "^5.0.1"
   },
   "nyc": {
     "include": [
