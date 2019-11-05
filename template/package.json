@@ -13,7 +13,7 @@
   "browserslist": "extends @rei/browserslist-config",
   "license": "UNLICENSED",
   "scripts": {
-    "dev:server": "cross-env NODE_ENV=dev febs dev",
+    "dev:server": "febs dev",
     "dev:build": "cross-env NODE_ENV=dev BABEL_ENV=es rollup -c --watch",
     "dev:clean": "rimraf dist && npm run dev",
     "dev": "npm-run-all -p dev:build dev:server",
