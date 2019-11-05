@@ -67,6 +67,14 @@ export default {
       style: {
         generateScopedName:
           process.env.NODE_ENV === 'dev' ? '[name]-[local]' : '[md5:hash:base64:16]',
+        preprocessOptions: {
+          scss: {
+            includePaths: ['node_modules/', 'src/'],
+            importer(path) {
+              return { file: path[0] !== '~' ? path : path.slice(1) };
+            }
+          },
+        },
       },
     }),
   ],
