@@ -31,8 +31,8 @@
     "test-vue-watch": "vunit --spec='./src/main/js/test/**/*.vue.spec.js' --watch=src/main/js"
   },
   "peerDependencies": {
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.1.1",
+    "@rei/cedar": "^3.0.4",
+    "@rei/cdr-tokens": "^2.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -40,8 +40,8 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "@rei/browserslist-config": "^1.0.4",
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.1.1",
+    "@rei/cedar": "^3.0.4",
+    "@rei/cdr-tokens": "^2.0.0",
     "@rei/febs": "^5.4.0",
     "@rei/vunit": "^2.0.0",
     "@vue/test-utils": "^1.0.0-beta.29",
