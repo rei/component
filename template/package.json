@@ -21,14 +21,9 @@
     "lint": "eslint --ext .js,.vue src",
     "prebuild": "rimraf dist index.css",
     "build": "cross-env NODE_ENV=production BABEL_ENV=es rollup -c",
-    "test": "cross-env BABEL_ENV=test nyc --all vunit --spec=./test/**/*.spec.js",
-    "test-coverage": "npm run test-js-coverage && npm run test-vue-coverage",
-    "test-js": "cross-env BABEL_ENV=test mocha --require babel-register --recursive src/main/js/test/**/*.spec.js",
-    "test-js-coverage": "cross-env NODE_ENV=test nyc mocha --require babel-register --recursive src/main/js/test/**/*.spec.js",
-    "test-js-watch": "cross-env BABEL_ENV=test mocha --require babel-register --watch --recursive src/main/js/test/**/*.spec.js",
-    "test-vue": "vunit --spec=./src/main/js/test/**/*.vue.spec.js",
-    "test-vue-coverage": "vunit --spec=./src/main/js/test/**/*.vue.spec.js --coverage",
-    "test-vue-watch": "vunit --spec='./src/main/js/test/**/*.vue.spec.js' --watch=src/main/js"
+    "test": "vunit --spec=./test/**/*.spec.js",
+    "test-coverage": "vunit --spec=./test/**/*.spec.js --coverage",
+    "test-watch": "vunit --spec='./test/**/*.spec.js' --watch=src,test"
   },
   "peerDependencies": {
     "@rei/cedar": "^2.0.2",
