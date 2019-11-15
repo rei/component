@@ -81,8 +81,7 @@ export default {
   </div>
 </template>
 <style lang="scss">
-@import '../globals.scss';
-// cedar tokens imported into globals.scss available here
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 .cdr-button {
   &__icon {
     fill: $cdr-color-icon-emphasis-darkmode;

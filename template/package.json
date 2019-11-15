@@ -13,7 +13,7 @@
   "browserslist": "extends @rei/browserslist-config",
   "license": "UNLICENSED",
   "scripts": {
-    "dev:server": "cross-env NODE_ENV=dev febs dev",
+    "dev:server": "febs dev",
     "dev:build": "cross-env NODE_ENV=dev BABEL_ENV=es rollup -c --watch",
     "dev:clean": "rimraf dist && npm run dev",
     "dev": "npm-run-all -p dev:build dev:server",
@@ -26,8 +26,8 @@
     "test-watch": "vunit --spec='./test/**/*.spec.js' --watch=src,test"
   },
   "peerDependencies": {
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.1.1",
+    "@rei/cedar": "^3.0.4",
+    "@rei/cdr-tokens": "^2.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
@@ -35,8 +35,8 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/runtime": "^7.5.5",
     "@rei/browserslist-config": "^1.0.4",
-    "@rei/cedar": "^2.0.2",
-    "@rei/cdr-tokens": "^1.1.1",
+    "@rei/cedar": "^3.0.4",
+    "@rei/cdr-tokens": "^2.0.0",
     "@rei/febs": "^5.4.0",
     "@rei/vunit": "^2.0.0",
     "@vue/test-utils": "^1.0.0-beta.29",

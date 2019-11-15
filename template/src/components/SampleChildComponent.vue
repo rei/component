@@ -1,11 +1,10 @@
 <script>
-import { CdrText, CdrAccordion, CdrAccordionItem } from '@rei/cedar';
+import { CdrText, CdrAccordion } from '@rei/cedar';
 
 export default {
   name: 'SampleChildComponent',
   components: {
     CdrAccordion,
-    CdrAccordionItem,
     CdrText,
   },
   props: {
@@ -33,17 +32,16 @@ export default {
       {{ accordionLabel }}
     </cdr-text>
     <div v-if="faqs">
-      <cdr-accordion :compact="true">
-        <cdr-accordion-item
-          v-for="(faq, i) in cleanedFaqs"
-          :id="`faq-item-${i}`"
-          :key="`faq-${i}`"
-          :label="faq.question"
-        >
-          <cdr-text tag="p">
-            {{ faq.answer }}
-          </cdr-text>
-        </cdr-accordion-item>
+      <cdr-accordion
+        v-for="(faq, i) in cleanedFaqs"
+        :id="`faq-item-${i}`"
+        :key="`faq-${i}`"
+        :label="faq.question"
+        :compact="true"
+      >
+        <cdr-text tag="p">
+          {{ faq.answer }}
+        </cdr-text>
       </cdr-accordion>
     </div>
     <div v-else>

@@ -13,5 +13,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../globals.scss';
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 </style>
