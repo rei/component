@@ -28,7 +28,7 @@ export default {
 </script>
 <template>
   <div class="child-component">
-    <cdr-text modifier="body">
+    <cdr-text modifier="body-300">
       {{ accordionLabel }}
     </cdr-text>
     <div v-if="faqs">
