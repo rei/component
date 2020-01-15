@@ -26,8 +26,8 @@
     "test-watch": "vunit --spec='./test/**/*.spec.js' --watch=src,test"
   },
   "dependencies": {
-    "@babel/runtime": "^7.5.5",
-    "@babel/runtime-corejs3": "^7.5.5",
+    "@babel/runtime": "^7.7.4",
+    "@babel/runtime-corejs3": "^7.7.4",
     "@rei/cedar": "^4.0.0",
     "@rei/cdr-tokens": "^3.0.0",
   },
@@ -35,9 +35,9 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/runtime": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/runtime": "^7.7.4",
     "@rei/browserslist-config": "^1.0.4",
     "@rei/febs": "^6.0.0",
     "@rei/vunit": "^2.0.0",
