@@ -19,16 +19,20 @@ export default {
       default: 'Accordion Label Not Set',
     },
   },
-  computed: {
-    cleanedFaqs() {
-      return this.faqs.filter(faq => faq.question && faq.answer);
-    },
+  data() {
+    return {
+      // note that this will not dynamically update if `faqs` change,
+      // add a Vue watcher to handle that if needed
+      cleanedFaqs: this.faqs
+        .filter(faq => faq.question && faq.answer)
+        .map(faq => Object.assign({ opened: false }, faq)),
+    }
   },
 };
 </script>
 <template>
   <div class="child-component">
-    <cdr-text modifier="body">
+    <cdr-text modifier="body-300">
       {{ accordionLabel }}
     </cdr-text>
     <div v-if="faqs">
@@ -38,6 +42,8 @@ export default {
         :key="`faq-${i}`"
         :label="faq.question"
         :compact="true"
+        :opened="faq.opened"
+        @accordion-toggle="faq.opened = !faq.opened"
       >
         <cdr-text tag="p">
           {{ faq.answer }}

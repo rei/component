@@ -51,17 +51,17 @@ export default {
 </script>
 <template>
   <div class="sample-component">
-    <cdr-text tag="h1" modifier="display">
+    <cdr-text tag="h1" modifier="heading-serif-strong-700 heading-serif-strong-900@md heading-serif-strong-1100@lg">
       {{ title }}
     </cdr-text>
-    <cdr-text tag="p" modifier="body">
+    <cdr-text tag="p" modifier="body-300">
       {{ description }}
     </cdr-text>
     <sample-child-component
       v-if="showFaqs"
       :faqs="faqs"
       :accordion-label="accordionLabel"
-      class="cdr-stack"
+      class="cdr-mb-space-one-x"
     />
     <cdr-button :on-click="toggleFaqs">
       <icon-x-fill
