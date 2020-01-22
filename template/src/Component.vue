@@ -1,11 +1,13 @@
 <template>
   <div>
     <cdr-text
-      tag="h1" modifier="" class="cdr-align-text-center"
+      tag="h1"
+      class="cdr-align-text-center"
+      modifier="heading-serif-strong-700"
     >
       {{title}}
     </cdr-text>
-    <cdr-text modifier="">{{description}}</cdr-text>
+    <cdr-text modifier="body-300">{{description}}</cdr-text>
   </div>
 </template>
 
