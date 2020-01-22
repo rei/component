@@ -27,25 +27,16 @@ module.exports = {
       type: 'string',
       label: 'Author',
     },
-    addComponents: {
-      type: 'boolean',
-      required: true,
-      label: 'Include sample Vue components?',
-      default: true,
-    },
   },
   helpers: {
     pascalcase: toPascal,
   },
-  filters: {
-    'src/components/Sample*.*': 'addComponents',
-  },
-  skipInterpolation: 'src/**/*.vue',
+  skipInterpolation: 'src/Component.vue',
   complete: function(data, { logger, chalk }) {
     // Rename to be compatible with styleguide configuration
     const cmpDir = data.inPlace
-      ? 'src/components'
-      : path.resolve(data.destDirName, 'src/components');
+      ? 'src'
+      : path.resolve(data.destDirName, 'src');
     const testDir = data.inPlace
     ? 'test'
     : path.resolve(data.destDirName, 'test');
@@ -65,7 +56,7 @@ module.exports = {
     const logFiles = {
       component: path.relative(
         data.destDirName,
-        path.resolve(data.destDirName, 'src/components', pascalName + '.vue'),
+        path.resolve(data.destDirName, 'src', pascalName + '.vue'),
       ),
     };
     logger.log(chalk.green('npm install'));

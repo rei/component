@@ -9,13 +9,13 @@ import '@rei/cedar/dist/style/reset.css';
 
 /* load the compiled CSS for this component */
 import './dist/index.css';
-/* Bring in entry component here - from 'main' field in package.json*/
-import MainComponent from '.';
+/* Bring in demo component here */
+import Demo from './src/Demo.vue';
 
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
-  components: { MainComponent },
+  render: app => app(Demo)
 });
