@@ -3,16 +3,10 @@
 
 ## To Get Started
 * Run `npm run dev` to run the component locally. (See local development below)
-{{#if_eq addComponents true}}
-### If you want to reuse the sample components:
-* Rename the SampleComponent.vue file to your preferred component name.
-  * Update the name property in the `SampleComponent.vue` to reflect your new component name.
-  * update the import path in `src/components/index.js`
-{{/if_eq}}
 
 ### Loading Cedar
 
-This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and [@rei/cdr-tokens](https://github.com/rei/rei-cedar-tokens) by default. The components can be imported into any .vue file, and the tokens are made available via the `globals.scss` file. If either of these packages are not required for your component, you should delete their entries from the package.json (both inside `peerDependencies` and `devDependencies`).
+This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and [@rei/cdr-tokens](https://github.com/rei/rei-cedar-tokens) by default. The components can be imported into any .vue file, and the tokens are made available via the `globals.scss` file. If either of these packages are not required for your component, you should delete their entries from the package.json (both inside `peerDependencies` and `devDependencies`). Note that Cedar CSS must be manually loaded for each part of Cedar that is used. See [src/main.scss](./blob/master/template/src/main.scss) for an example of how this is done or the [Cedar getting started as a developer guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer) for more information on using cedar.
 
 ### Build system
 
@@ -61,10 +55,10 @@ npm run test
 ├── index.html // local dev html file
 ├── local-development.js // local dev container file
 ├── src
-│   ├── components
-│   │   └── // component vue files
-│   ├── index.js // root component file
-│   ├── globals.scss // root styles
+│   ├── {{pascalcase name}}.vue // Component source code
+│   ├── Demo.vue // Vue component used for the local development server
+│   ├── index.js // component entry file, exports Vue component and styles
+│   ├── main.scss // root styles
 ├── test
 │   └── // spec files and test utilities
 ├── package-lock.json
