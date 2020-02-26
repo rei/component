@@ -20,6 +20,7 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "prebuild": "rimraf dist index.css",
+    "prepare": "npm run build",
     "build": "cross-env NODE_ENV=production BABEL_ENV=es rollup -c",
     "test": "vunit --spec=./test/**/*.spec.js",
     "test-coverage": "vunit --spec=./test/**/*.spec.js --coverage",
