@@ -10,7 +10,6 @@
     "dist",
     "src"
   ],
-  "browserslist": "extends @rei/browserslist-config",
   "license": "UNLICENSED",
   "scripts": {
     "dev:server": "febs dev --profile=application",
@@ -35,21 +34,16 @@
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "@babel/runtime": "^7.8.4",
-    "@rei/browserslist-config": "^1.0.4",
     "@rei/cdr-tokens": "^3.0.0",
     "@rei/febs": "^7.1.0",
     "@rei/vunit": "^2.1.4",
     "@vue/test-utils": "^1.0.0-beta.31",
-    "babel-eslint": "^10.0.1",
+    "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.2.0",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-vue": "^5.2.2",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-vue": "^6.2.1",
     "npm-run-all": "^4.1.5",
     "rimraf": "^2.6.0"
   },
