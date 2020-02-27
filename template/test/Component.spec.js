@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
 import { expect } from 'chai';
 
-import MainComponent from '../src/components/{{pascalcase name}}.vue';
+import MainComponent from '../src/{{pascalcase name}}.vue';
 
 describe('Main component tests', () => {
   const wrapper = mount(MainComponent);
