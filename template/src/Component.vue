@@ -5,21 +5,27 @@
       class="cdr-align-text-center"
       modifier="heading-serif-strong-700"
     >
-      {{title}}
+      {{ title }}
     </cdr-text>
-    <cdr-text modifier="body-300">{{description}}</cdr-text>
+    <cdr-text modifier="body-300">
+      {{ description }}
+    </cdr-text>
   </div>
 </template>
 
 <script>
 import { CdrText } from '@rei/cedar';
+
 export default {
   name: 'MainComponent',
   components: {
-    CdrText
+    CdrText,
   },
-  props: ['title','description'],
-}
+  props: {
+    title: String,
+    description: String,
+  },
+};
 </script>
 
 <style lang="scss">
