@@ -1,0 +1,16 @@
+{
+  "require": [
+    "@babel/register"
+  ],
+  "exclude": [
+    "src/**/*.spec.js",
+    "dist",
+    "target",
+    "node_modules",
+    "coverage",
+    ".babelcache",
+    "webpack.overrides.conf.js"
+  ],
+  "sourceMap": false,
+  "instrument": false
+}

@@ -10,3 +10,6 @@ yarn-error.log
 *.ntvs*
 *.njsproj
 *.sln
+coverage/
+febs-runtime.json
+.nyc_output/

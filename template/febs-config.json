@@ -1,5 +1,8 @@
 {
   "entry": {
     "app":["./local-development.js"]
+  },
+  "output": {
+    "path": "./dist"
   }
 }
