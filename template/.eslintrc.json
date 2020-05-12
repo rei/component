@@ -1,11 +1,15 @@
 {
   "extends": ["airbnb-base", "plugin:vue/recommended"],
+  "globals": {
+    "expect": true
+  },
   "env": {
     "node": true,
     "mocha": true,
     "browser": true
   },
   "rules": {
+    "vue/max-attributes-per-line": "off",
     "comma-dangle": [
       "error",
       {
@@ -16,5 +20,10 @@
         "functions": "ignore"
       }
     ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": { "paths": "./src" }
+    }
   }
 }
