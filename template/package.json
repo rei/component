@@ -35,10 +35,9 @@
   "devDependencies": {
     "@rei/cdr-tokens": "^5.0.0",
     "@rei/febs": "^7.1.0",
-    "@rei/vunit": "^2.1.4",
+    "@rei/vunit": "^3.0.0",
     "@vue/test-utils": "^1.0.0",
     "babel-plugin-istanbul": "^6.0.0",
-    "chai": "^4.2.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",

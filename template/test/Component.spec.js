@@ -1,5 +1,4 @@
 import { mount } from '@vue/test-utils';
-import { expect } from 'chai';
 
 import MainComponent from '../src/{{pascalcase name}}.vue';
 
