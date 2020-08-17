@@ -27,13 +27,13 @@
   "dependencies": {
     "@babel/runtime": "^7.8.4",
     "@babel/runtime-corejs3": "^7.8.4",
-    "@rei/cedar": "^5.0.0"
+    "@rei/cedar": "^6.0.0"
   },
   "peerDependencies": {
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^4.0.0",
+    "@rei/cdr-tokens": "^5.0.0",
     "@rei/febs": "^7.1.0",
     "@rei/vunit": "^2.1.4",
     "@vue/test-utils": "^1.0.0",
