@@ -1,5 +1,9 @@
 /* import Cedar component CSS used in this package */
-@import url("@rei/cedar/dist/style/cdr-text.css");
+@import url("@rei/cedar/dist/style/cdr-link.css");
+
+// cdr-text CSS not imported as component uses text mixins instead of utility classes
+// @import url("@rei/cedar/dist/style/cdr-text.css");
+
 /* import Cedar utility class files used in this package */
 @import url("@rei/cedar/dist/style/align.css");
 /* for more info: https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/#include-component-and-utility-css */

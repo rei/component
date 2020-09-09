@@ -1,5 +1,3 @@
-import { expect } from 'chai';
-
 describe('Example unit test', () => {
   function double(x) {
     return x * 2;
