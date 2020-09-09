@@ -7,7 +7,7 @@
 
 <script>
 // import compiled component from dist
-import {{pascalcase name}} from '..'; // TODO replace Component with pascalCase or whatever?
+import {{pascalcase name}} from '..';
 
 export default {
   name: 'Demo',
