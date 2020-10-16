@@ -82,11 +82,9 @@ npm run test
 
 Please read and familiarize yourself with our basics before contributing:
 
-* [Updating code in FEDPACK Repositories](https://confluence.rei.com/display/FED/Updating+Code+in+FEDPACK+Repositories)
-* [Updating npm Dependencies](https://confluence.rei.com/display/FED/Updating+npm+Dependencies)
+* [npm packages at REI](https://confluence.rei.com/display/FED/npm+packages+at+REI)
 * [Style guides](https://github.com/rei/code-style-guides)
 * [Unit testing](https://confluence.rei.com/display/FED/Unit+Testing+on+the+Frontend)
-* [Updating tags](https://confluence.rei.com/display/FED/Updating+Code+in+FEDPACK+Repositories#UpdatingCodeinFEDPACKRepositories-git-tag)
 * [Semver versioning](http://semver.org/)
 
 ### Example Publishing workflow
