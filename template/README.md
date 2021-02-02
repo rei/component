@@ -6,7 +6,7 @@
 
 ### Loading Cedar
 
-This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and [@rei/cdr-tokens](https://github.com/rei/rei-cedar-tokens) by default. The components can be imported into any .vue file, and the tokens are made available via the `globals.scss` file. If either of these packages are not required for your component, you should delete their entries from the package.json (both inside `peerDependencies` and `devDependencies`). Note that Cedar CSS must be manually loaded for each part of Cedar that is used. See [src/main.scss](./blob/master/template/src/main.scss) for an example of how this is done or the [Cedar getting started as a developer guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer) for more information on using cedar.
+This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and [@rei/cdr-tokens](https://github.com/rei/rei-cedar-tokens) by default. If either of these packages are not required for your component, you should delete their entries from the package.json. Note that Cedar CSS must be manually loaded for each part of Cedar that is used. See [src/main.scss](./blob/master/template/src/main.scss) for an example of how this is done or the [Cedar getting started as a developer guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer) for more information on using cedar.
 
 ### Build system
 

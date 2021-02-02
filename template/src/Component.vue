@@ -2,7 +2,7 @@
   <div>
     <cdr-text
       tag="h1"
-      class="header cdr-align-text-center"
+      class="header"
     >
       {{ title }}
     </cdr-text>
@@ -32,6 +32,7 @@ export default {
 @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 .header {
   @include cdr-text-heading-serif-strong-700;
+  text-align: center;
 }
 
 .body {
