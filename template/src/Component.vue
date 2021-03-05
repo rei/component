@@ -14,12 +14,13 @@
 </template>
 
 <script>
-import { CdrText } from '@rei/cedar';
+import { CdrText, CdrLink } from '@rei/cedar';
 
 export default {
   name: 'MainComponent',
   components: {
     CdrText,
+    CdrLink,
   },
   props: {
     title: String,
