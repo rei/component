@@ -4,14 +4,29 @@
 ## To Get Started
 * Run `npm run dev` to run the component locally. (See local development below)
 
-### Loading Cedar
+## API
 
-This project loads [@rei/cedar components](https://github.com/rei/rei-cedar) and [@rei/cdr-tokens](https://github.com/rei/rei-cedar-tokens) by default. If either of these packages are not required for your component, you should delete their entries from the package.json. Note that Cedar CSS must be manually loaded for each part of Cedar that is used. See [src/main.scss](./blob/master/template/src/main.scss) for an example of how this is done or the [Cedar getting started as a developer guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer) for more information on using cedar.
+This module exports a plain Vue.js component.
 
-### Build system
+The component takes the following props:
 
-This component only contains a build system for distribution and another for development.
-`rollup` is used for distribution, as `webpack` does not currently export `ES6` modules. `febs` is used for the local dev server as it is anticipated the final application will be bundled using `febs`.
+| Name                        | Type      | Required  | Purpose |
+| --------------------------- | --------- | --------- |--------- |
+| `title`| `string`| false | Set component title |
+| `description` | `string` | false | Set component description |
+
+The component takes the following slots:
+
+| Name | Required  | Purpose |
+| -----| --------- | --------|
+| `default`| false    | Allows inserting content  |
+
+
+The component emits the following events:
+
+| Name | Passed Arguments  | Purpose |
+| ---- | ---------------- | -------- |
+| `example` | n/a | Just an example |
 
 ## Local Development
 ``` bash

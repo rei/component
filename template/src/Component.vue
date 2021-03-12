@@ -10,6 +10,7 @@
       {{ description }}
     </cdr-text>
     <cdr-link href="rei.com">homepage</cdr-link>
+    <slot/>
   </div>
 </template>
 
